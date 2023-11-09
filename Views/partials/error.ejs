@@ -1,0 +1,29 @@
+<% if (danger) { %>
+  <div class="flash-message position-fixed top-0 start-50 translate-middle-x">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <%= danger %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
+<% } %>
+<style>
+  .flash-message {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.alert.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+
+.alert.alert-danger .btn-close {
+  color: #721c24;
+}
+</style>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  

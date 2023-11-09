@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/interfaz/soporte.css">
+    <link rel="stylesheet" href="/interfaz/error.css">
+    <link href="https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- soporte.ejs -->
+    <div class="hero">
+        <%- include('../partials/error') %>
+            <nav class="navbar">
+                <h2 class="logo">Sistema <span>fugas</span></h2>
+                <ul>
+                    <li><a href="#"></a></li>
+                </ul>
+                <form action="/dashboard" method="get">
+                    <button class="perfil" type="submit">regresar</button>
+                </form>
+            </nav>
+            <main class="main">
+                <!-- Encabezado de la página -->
+                <h1>Formulario de inserción de datos en la tabla "fugas"</h1>
+
+                <form action="/fugas/create" method="POST">
+                    <div>
+                      <label for="fechaHora">Fecha y Hora:</label>
+                      <input type="datetime-local" id="fechaHora" name="fechaHora" required>
+                    </div>
+                    <div>
+                      <label for="intensidad">Intensidad:</label>
+                      <input type="number" id="intensidad" name="intensidad" required>
+                    </div>
+                    <div>
+                      <label for="estado">Estado:</label>
+                      <select id="estado" name="estado" required>
+                        <option value="0">Apagado</option>
+                        <option value="1">Encendido</option>
+                      </select>
+                    </div>
+                    <button type="submit">Guardar</button>
+                  </form>
+
+                <!-- Información adicional de contacto -->
+            </main>
+
+    </div>
+    <style>
+        /* Estilos para el elemento select */
+        select {
+            border-radius: 10px solid;
+            background-color:white;
+          padding: 8px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+      </style>
+</body>
+
+</html>

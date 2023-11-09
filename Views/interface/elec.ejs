@@ -1,0 +1,129 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/registro.css">
+    <title>Electricistas</title>
+</head>
+
+<body>
+    <div>
+        <div class="hero">
+            <nav class="navbar">
+                <ul class="nav-links">
+                  <li class="nav-item"><a href="/logout">Salir</a></li>
+                  <li class="nav-item"><a href="/errores">Errores</a></li>
+                  <li class="nav-item"><a href="/electricistas">Electricistas</a></li>
+                  <li class="nav-item"><a href="/usuarios_inactivos">Usuarios Inactivos</a></li>
+                </ul>
+              </nav>
+            <main class="main-dashboard">
+                <div class="container-electricista">
+                    <h2 class="title">Lista de Electricistas</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
+                                <th>Correo</th>
+                                <th>Teléfono</th>
+                                <th>Zona</th>
+                                <th>Calle</th>
+                                <th>Numero</th>
+                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% electricistas.forEach(function(electricista) { %>
+                                <tr class="color-tr">
+                                    <td>
+                                        <%= electricista.nombreElectricista %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.apellidoPaterno %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.apellidoMaterno %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.correo %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.telefono %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.zona %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.calle %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.numero %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.compania %>
+                                    </td>
+                                </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                    
+                    <a href="/electricistas/agregar" class="btn">Añadir</a>
+
+                    <button class="btn">agendar cita</button>
+                </div>
+            </main>
+        </div>
+    </div>
+    <style>
+        .main-dashboard {
+  padding: 20px;
+}
+
+.container-electricista {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+table th,
+table td {
+    color: white;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #337ab7;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: #23527c;
+}
+
+.btn:active {
+  background-color: #1b4565;
+}
+    </style>
+</body>
+
+</html>

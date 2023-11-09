@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agregar Electricista</title>
+</head>
+<body>
+  <h1>Agregar Electricista</h1>
+
+
+  <form action="/electricistas/agregar" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombreElectricista" required><br>
+
+    <label for="apellidoPaterno">Apellido Paterno:</label>
+    <input type="text" id="apellidoPaterno" name="apellidoPaterno" required><br>
+
+    <label for="apellidoMaterno">Apellido Materno:</label>
+    <input type="text" id="apellidoMaterno" name="apellidoMaterno" required><br>
+
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" name="correo" required><br>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" required><br>
+
+    <label for="zona">Zona:</label>
+    <input type="text" id="zona" name="zona" required><br>
+
+    <label for="calle">Calle:</label>
+    <input type="text" id="calle" name="calle" required><br>
+
+    <label for="numero">Número:</label>
+    <input type="text" id="numero" name="numero" required><br>
+
+    
+
+    <input type="submit" value="Agregar">
+  </form>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #23527c;
+}
+
+input[type="submit"]:active {
+  background-color: #1b4565;
+}
+  </style>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/login.css">
+	<title>C.S.M</title>
+</head>
+
+<body>
+	<div class="login-box">
+		<h2>INICIAR</h2>
+		<img class="imagge" src="img/calle.jpg" alt="">
+		<form action="/signin" method="POST">
+			<div class="user-box">
+				<input type="text" name="nombre" id="usuario" required="" autocomplete="off">
+				<label>Nombre Usuario</label>
+			</div>
+			<div class="user-box">
+				<input  type="password" id="Contraseña" name="contraseña" required="" class="label" autocomplete="off">
+				<label for="nombre" class="label1">Contraseña</label>
+				<button class="mostrar-contraseña" id="mostrar-contraseña"><img id="ojo"
+						src="img/ojo-cerrado.png" /></button>
+			</div>
+			<button type="submit" class="btn-entrar" id="btn-entrar">  Entrar </button>
+			<p><a class="registrarse" id="registrarse" href=""> ¿Registrarse? </a></p>
+		</form>
+	</div>
+	<div class="col-md-4 offset-md-4">
+		<%- include('../partials/error') %>
+	</div>
+	<script src="/prueba.js"></script>
+	<script src="/signin.js"></script>
+</body>
+
+</html>

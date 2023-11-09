@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/interfaz/soporte.css">
+  <link rel="stylesheet" href="/interfaz/error.css">
+  <link href="https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  
+  <!-- soporte.ejs -->
+  <div class="hero">
+    <%- include('../partials/error') %>
+    <nav class="navbar">
+      <h2 class="logo">Sistema <span>fugas</span></h2>
+      <ul>
+        <li><a href="#"></a></li>
+      </ul>
+      <form action="/dashboard" method="get">
+        <button class="perfil" type="submit">regresar</button>
+      </form>
+    </nav>
+    <main class="main">
+      <!-- Encabezado de la página -->
+      <h1>Soporte</h1>
+
+      <!-- Descripción o instrucciones para los usuarios -->
+      <p class="color-p">Si necesita ayuda o tiene alguna pregunta, puede comunicarse con nuestro equipo de soporte.</p>
+
+      <!-- Formulario de contacto -->
+      <form action="/soporte" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+
+      <!-- Información adicional de contacto -->
+      <p> <a href="https://wa.me/+59162368363" target="_blank" class="color-p">contacto de whatsapp</a></p>
+    </main>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+
+body {
+  background-image: url('https://www.xtrafondos.com/descargar.php?id=3183&resolucion=2560x1440');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  background: linear-gradient( 60deg, #2f00ff, #ff00f7, #ff0015);
+  background-clip: text;/*Puedes agregar la propiedad background-clip junto con las otras propiedades para definir el gradiente.*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 100px;
+  text-shadow: #4000ff;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.219);
+  border-radius: 20px;
+  box-shadow: 0 2px 100px rgb(4, 0, 255);
+}
+
+label {
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.256);
+  width: 100%;
+  padding: 8px;
+  border: 5px solid #ffffff10;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+  border: 5px solid #ff0000;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+background: rgba(94, 61, 222, 1.0);
+background: linear-gradient(45deg, rgba(94, 61, 222, 1.0), rgba(231, 114, 88, 1.0));
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=2accb7&c2=fa11fc&gt=l&gd=dbl
+*/
+background: rgba(42, 204, 183, 1.0);
+background: linear-gradient(45deg, rgba(42, 204, 183, 1.0), rgba(250, 17, 252, 1.0));
+}
+
+/* Añade estilos adicionales según tus preferencias */

@@ -1,0 +1,226 @@
+@font-face{
+	font-family: regular;
+	src: url('/Views/assets/font/LuckiestGuy-Regular.ttf') format('truetype');
+}
+@font-face{
+	font-family: cascadia;
+	src: url('/Views/assets/font/CascadiaCodeItalic.ttf');;
+}
+
+body {
+	font-family: regular;
+	background-image: url('https://www.xtrafondos.com/descargar.php?id=3183&resolucion=2560x1440');
+	background-repeat: no-repeat;
+	background-size: cover;   
+	margin: 0;
+	padding: 0;
+}
+.login-box{
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.219);
+	border-radius: 20px;
+	text-align: center;
+	box-shadow: 0 2px 100px rgb(4, 0, 255);
+  }
+/*.login-box {
+
+	border-color: transparent;
+    box-shadow: 0 2px 100px rgba(43, 0, 255, 0.795);
+	
+	width: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.162);
+	padding: 35px;
+	
+	border-radius: 40px;
+}*/
+
+.login-box h2 {
+	font-size: 35px;
+  background: linear-gradient( 45deg, #02d8ff, #ff8502, #02d8ff);
+  background-clip: text;/*Puedes agregar la propiedad background-clip junto con las otras propiedades para definir el gradiente.*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;/*a propiedad background-clip especifica la zona de la caja del elemento donde se mostrará el fondo. Puedes establecer esta propiedad en text para asegurarte de que el gradiente solo se aplique al texto y no a todo el fondo.*/
+	margin: 0 0 30px;
+	padding: 0;
+	text-align: center;
+	font-style: italic;
+}
+
+.user-box {
+	position: relative;
+	padding: 17px;
+}
+
+.user-box input {
+	width: 200px;
+	height: 40px;
+	padding: 20px 0 10;
+	font-size: 16px;
+	color: white;
+	border: 2px solid transparent;
+	outline: none;
+	background-color: rgba(0, 0, 0, 0.635);
+}
+
+.user-box label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: rgb(255, 255, 255);
+	pointer-events: none;
+	transition: 0.10s;
+}
+
+
+.btn {
+	background: white;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: #fff;
+	color: #ff0202;
+}
+.mostrar-contraseña{
+	cursor: pointer;
+	border: none;
+	background: transparent;
+  /* O, si prefieres usar background-color: */
+    background-color: transparent;
+}
+.mostrar-contraseña img{
+	background-image: url('./assets/icons8-ojo-cerrado-50.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 30%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  display: block;
+  height: 30px;
+  width: 30px;
+}
+.mostrar-contraseña img :hover{
+	background-image:url(./assets/ojo-abierto.png) ;
+}
+.btn-enviar{
+	font-family: cascadia;
+	border: 0,25em solid #02d8ff;
+	padding: 15px 25px;
+	color: #02d8ff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 15px;
+	font-weight: bold;
+	background-color: #021301;
+	border-radius: 25px;
+	box-shadow: 0 0 1em 0.25em #02d8ff,
+	0 0 4em 1em rgba(3, 205, 241, 0.78),
+	inset 0 0 0.75em 0.25em #02d8ff;
+	text-shadow: 0 0 0.5em #02d8ff;
+	position: relative;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.btn-enviar:hover {
+	color: #021301;
+	background-color: #02d8ff;
+	box-shadow: 0 0 1em 0.25em #02d8ff,
+	0 0 4em 1em rgba(3, 205, 241, 0.78),
+	inset 0 0 0.75em 0.25em #02d8ff;
+}
+.user-box label :focus{
+	background-color: transparent;
+}
+::placeholder {
+	font-family: cascadia;
+	background: linear-gradient( 45deg, #02d8ff, #ff8502, #02d8ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Cambia el color del placeholder */
+	font-size: 14px; /* Cambia el tamaño de fuente del placeholder */
+	font-style: italic; /* Cambia el estilo de fuente del placeholder */
+  }
+  .full-screen {
+	font-family: regular;
+	padding-top: 30px;
+	padding-left: 30px;
+  position: relative;
+  width: 200px;
+  height: 50px;
+}
+
+.btn-4 {
+	font-family: regular;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.btn-4::after,
+.btn-4::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;                                                                                                     /*255,15,15*/
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(90deg, rgb(199, 98, 16), rgb(19, 227, 255), rgb(251, 255, 20), rgb(107, 15, 255));
+  background-size: 300%;
+  border-radius: 5px;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.btn-4::after {
+  filter: blur(15px);
+}
+
+.btn-4:hover::after {
+  background-position: 100%;
+  filter: blur(0);
+}
+.user-box {
+	display: flex;
+	align-items: center;
+  }
+  
+  .user-box .icon {
+	width: 20px; /* Ajusta el tamaño de la imagen */
+	margin-right: 10px; /* Ajusta el espacio entre la imagen y el texto */
+  }
+  
+  .user-box input {
+	width: 100%;
+	padding: 8px;
+	border-radius: 4px;
+	font-size: 14px;
+  }
+.h1 {
+  background: linear-gradient( 60deg, #ffffff, #ffffff, #ffffff);
+  background-clip: text;/*Puedes agregar la propiedad background-clip junto con las otras propiedades para definir el gradiente.*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 100px;
+  text-shadow: #ff0000;
+  text-align: center;
+  color: red;
+  margin-bottom: 30px;
+}

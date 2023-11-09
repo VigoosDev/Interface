@@ -1,0 +1,113 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="/interfaz/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= user.nombre %></title>
+</head>
+
+<body>
+    <div class="hero">
+        <nav class="navbar">
+            <h2 class="logo">Sistema <span>fugas</span></h2>
+            <ul>
+              <li><a href="/soporte">Soporte</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="/electricistas">Electricistas</a></li>
+                <li><a href="/informacion">Informacion</a></li>
+
+                <li><a href="/logout">Salir</a></li>
+            </ul>
+            <form action="/perfil" method="get">
+                <button class="perfil" type="submit">Perfil</button>
+            </form>
+        </nav>
+        <main class="dashboard-main">
+            <h1 class="control">Panel de control de fugas</h1>
+        
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Fecha y Hora</th>
+                  <th>Intensidad</th>
+                  <th>Estado</th>
+                  <th>Usuario</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for (const fuga of fugas) { %>
+                <tr>
+                  <td><%= fuga.id_fuga %></td>
+                  <td><%= fuga.fechaHora %></td>
+                  <td><%= fuga.intensidad %></td>
+                  <td>
+                    <% if (fuga.estado === 0) { %>
+                      Reparada
+                    <% } else { %>
+                      No Reparada
+                    <% } %>
+                  </td>
+                  <td><%= user.id %></td>
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+            <a class="btn-a" href="/correoElec">Pedir asistencia</a>
+            <a class="btn-a" href="/fugas/create">Empezar</a>
+          </main>
+    </div>
+<style>
+    .control{
+        color: white;
+        margin-bottom: 10px;
+    }
+    /* Estilos para el main del dashboard */
+.dashboard-main {
+  max-width: 800px; /* Ajusta el valor según tus necesidades */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  padding: 20px;
+}
+
+/* Estilos para la tabla del dashboard */
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+    color: rgb(255, 255, 255);
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.dashboard-table th {
+  background-color: #ffffff3e;
+}
+
+.dashboard-table tr:nth-child(even) {
+    color: azure;
+  background-color: #ffffff;
+}
+.btn-a{
+  padding-top: 20px;
+  margin-top: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-a:hover{
+    color: red;
+    transition: .3s;
+}
+</style>
+</body>
+
+</html>

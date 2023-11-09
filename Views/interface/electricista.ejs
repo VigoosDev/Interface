@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/interfaz/electricista.css">
+    <title>Electricistas</title>
+</head>
+
+<body>
+    <div>
+        <div class="hero">
+            <nav class="navbar">
+                <h2 class="logo">Sistema <span>fugas</span></h2>
+                <ul>
+                    <li><a href="#">Ajustes</a></li>
+                </ul>
+                <form action="/dashboard" method="get">
+                    <button class="perfil" type="submit">regresar</button>
+                </form>
+            </nav>
+            <main>
+                <div class="container-electricista">
+                    <h2 class="title">Lista de Electricistas</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
+                                <th>Correo</th>
+                                <th>Teléfono</th>
+                                <th>Zona</th>
+                                <th>Calle</th>
+                                <th>Numero</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% electricistas.forEach(function(electricista) { %>
+                                <tr>
+                                    <td>
+                                        <%= electricista.nombreElectricista %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.apellidoPaterno %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.apellidoMaterno %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.correo %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.telefono %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.zona %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.calle %>
+                                    </td>
+                                    <td>
+                                        <%= electricista.numero %>
+                                    </td>
+                                    
+                                </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                    
+                    <a href="/electricistas/agregar" class="btn">Añadir</a>
+
+                    
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+

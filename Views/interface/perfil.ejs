@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="interfaz/perfil.css">
+  <link rel="stylesheet" href="/interfaz/navbar.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <div class="hero">
+      <nav class="navbar">
+        <h2 class="logo">Sistema <span>fugas</span></h2>
+        <ul>
+          <li><a href="#"></a></li>
+        </ul>
+        <form action="/dashboard" method="get">
+          <button class="perfil" type="submit">regresar</button>
+        </form>
+      </nav>
+      <main class="main">
+        <h2 class="comp">Información Personal</h2>
+        <div class="nombre">
+          <label for="nombre">Nombre:</label>
+          <span id="nombre">
+            <%= user.nombre %>
+          </span>
+        </div>
+        <div class="apellido">
+          <label for="apellido_p">Apellido Paterno:</label>
+          <span id="apellido_p">
+            <%= user.apellido_paterno %>
+          </span>
+        </div>
+        <div class="materno">
+          <label for="apellido_m">apellido materno:</label>
+          <span id="apellido_m">
+            <%= user.apellido_materno %>
+          </span>
+        </div>
+        <div class="correo">
+          <label for="correo">correo:</label>
+          <span id="correo">
+            <%= user.correo %>
+          </span>
+        </div>
+        <div class="telefono">
+          <label for="telefono">telefono:</label>
+          <span id="telefono">
+            <%= user.telefono %>
+          </span>
+        </div>
+        <div class="direccion">
+          <label for="direccion">direccion:</label>
+          <span id="direccion">
+            <%= user.direccion %>
+          </span>
+        </div>
+
+        <h2 class="comp1">Editar Perfil</h2>
+        <form action="/dashboard/<%= user.id %>" method="post">
+          <a href="/cambiar/<%= user.id %>" class="tecla">editar</a>
+        </form>
+      </main>
+    </div>
+  </div>
+
+</body>
+
+</html>

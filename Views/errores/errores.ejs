@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" type="text/css" href="/registro.css">
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap"
+      rel="stylesheet">
+  <title>Lista de Errores</title>
+</head>
+<body>
+<div class="hero">
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li class="nav-item"><a href="/logout">Salir</a></li>
+      <li class="nav-item"><a href="/errores">Errores</a></li>
+      <li class="nav-item"><a href="/electricistas">Electricistas</a></li>
+      <li class="nav-item"><a href="/usuarios_inactivos">Usuarios Inactivos</a></li>
+    </ul>
+  </nav>
+    <main class="dashboard-main">
+      <h1>Lista de Errores</h1>
+      <% if (errors.length === 0) { %>
+        <p>No se encontraron errores.</p>
+      <% } else { %>
+        <table>
+          <tr>
+            <th>Numero de Error</th>
+            <th>Fecha</th>
+            <th>Mensaje</th>
+            <th>ID de Usuario</th>
+          </tr>
+          <% errors.forEach(function(error) { %>
+            <tr>
+              <td><%= error.id_error %></td>
+              <td><%= error.fecha %></td>
+              <td><%= error.descripcion %></td>
+              <td><%= error.usuario_id %></td>
+            </tr>
+          <% }); %>
+        </table>
+      <% } %>
+    </main>
+</div>
+
+<style>
+  .dashboard-main {
+    max-width: 800px; /* Ajusta el valor según tus necesidades */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.158); /* Cambia el color de fondo según tus preferencias */
+    border-radius: 10px; /* Agrega esquinas redondeadas si lo deseas */
+  }
+
+  /* Estilos para la tabla */
+  .dashboard-main table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Agrega un margen superior si lo deseas */
+  }
+
+  .dashboard-main th,
+  .dashboard-main td {
+    color: white;
+    padding: 8px;
+    border: 1px solid #dddddd3e;
+    text-align: left;
+  }
+
+  .dashboard-main th {
+    background-color: #f9f9f922;
+  }
+
+  .dashboard-main tr:nth-child(even) {
+    background-color: #f2f2f248;
+  }
+</style>
+</body>
+</html>

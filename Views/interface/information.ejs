@@ -1,0 +1,163 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="interfaz/informacion.css">
+    <link rel="stylesheet" href="/interfaz/navbar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Estilo para el contenido adicional oculto */
+    .contenido-adicional {
+        display: none;
+    }
+
+    /* Estilo para el enlace "Leer más" */
+    .leer-mas {
+        display: inline-block;
+
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .color {
+        color: red;
+    }
+
+    .color-p {
+        color: white;
+    }
+    
+</style>
+
+<body>
+    <div>
+        <div class="hero">
+            <nav class="navbar">
+                <h2 class="logo">Sistema <span>fugas</span></h2>
+                <ul>
+                    <li><a href="#"></a></li>
+                </ul>
+                <form action="/dashboard" method="get">
+                    <button class="perfil" type="submit">regresar</button>
+                </form>
+            </nav>
+            <main class="main">
+                <!-- informacion.ejs -->
+                <h1 class="color">Manual de Usuario</h1>
+                <section>
+                    <h2 class="color">Introducción</h2>
+                    <p class="color-p">¡Gracias por adquirir nuestro detector de corriente alterna <b class="b">
+                            <%= user.nombre %>
+                        </b>! Este dispositivo te ayudará a detectar y medir fugas de corriente alterna en diferentes
+                        aplicaciones. A continuación, te proporcionamos las instrucciones para su uso adecuado.</p>
+                </section>
+                <section>
+                    <h2 class="color">Componentes</h2>
+                    <p class="color-p">
+                        3 Transistores C945 <br>
+                        1 Resistencia de 1K <br>
+                        1 Resistencia de 100 ohm <br>
+                    </p>
+
+                    <div class="contenido-adicional">
+                        <!-- Contenido adicional oculto -->
+                        <p class="color-p">
+                            1 Optoacoplador <br>
+                            PC817 <br>
+                            1 Pila Alcalina <br>
+                            27A o 23A <br>
+                            1 Diodo LED 5 mm <br>
+                            Pulsador NA (normalmente abierto2) <br>
+                            Buzzer intermitente <br>
+                            Condensador cerámico 104 <br>
+                        </p><br>
+                        <b>
+                            <h2 class="color">Preparación:</h2> <br>
+                        </b>
+                        <p class="color-p">
+                            Verifica que el detector de corriente esté en buenas condiciones y no presente daños
+                            visibles. <br>
+                            Asegúrate de tener las baterías necesarias instaladas o que el detector esté completamente
+                            cargado, según sea el caso. <br>
+                            Familiarízate con los botones, indicadores y modos de funcionamiento del detector. <br>
+                            Medición de corriente: <br>
+                            Asegúrate de que el detector esté apagado
+                            antes de comenzar. <br>
+
+                            Enciende el detector presionando el botón de encendido/apagado. <br>
+                            Coloca la punta del detector cerca del cable o circuito del que deseas medir la corriente o
+                            la pared. <br>
+                            Asegúrate de que la punta del detector esté completamente rodeando el cable sin tocar ningún
+                            otro objeto metálico. <br>
+                            Observa los indicadores del detector para leer la corriente detectada. Algunos
+                            detectores pueden mostrar la corriente directamente en la pantalla, mientras que otros
+                            pueden tener luces o alarmas sonoras para indicar la presencia de corriente. <br>
+                            Verificación de la ausencia de corriente: <br>
+                            Si deseas verificar si un circuito está apagado o sin corriente, sigue los pasos anteriores
+                            para encender el detector y seleccionar el modo adecuado. <br>
+                            Coloca la punta del detector cerca del cable o circuito del que deseas verificar la ausencia
+                            de corriente. <br>
+                            Asegúrate de que la punta del detector esté completamente rodeando el cable sin tocar ningún
+                            otro objeto metálico. <br>
+                            Observa la alarma o indicadores del detector para asegurarte de que no se detecte ninguna
+                            corriente. <br> El detector puede tener luces o alarmas sonoras para indicar la ausencia de
+                            corriente. <br>
+                            <h2 class="color">Precauciones de seguridad:</h2> <br>
+                            <p class="color-p">Mantén el circuito alejado de fuentes de calor, humedad o ambientes adversos que puedan
+                            afectar su funcionamiento. <br> Siempre sigue las indicaciones de polaridad al conectar la pila
+                            alcalina para evitar dañar el circuito. <br> Evita tocar los componentes con las manos desnudas,
+                            ya
+                            que las descargas estáticas pueden dañarlos. <br> Utiliza herramientas adecuadas y manipula los
+                            componentes con cuidado. <br> No sobrecargues el circuito con corrientes más allá de sus
+                            especificaciones. <br> Asegúrate de que las corrientes y voltajes involucrados estén dentro de
+                            los
+                            límites establecidos por los componentes utilizados. <br> Siempre desconecta la pila alcalina
+                            cuando no estés utilizando el detector de corriente alterna, especialmente durante periodos
+                            prolongados de inactividad. <br> Si encuentras algún problema o mal funcionamiento del circuito,
+                            revisa cuidadosamente las conexiones y componentes para detectar posibles errores de
+                            montaje o daños. <br> Mantén el circuito fuera del alcance de niños o personas no capacitadas, y
+                            asegúrate de que se utilice bajo supervisión y con precaución. <br> Siempre apaga el circuito y
+                            desconecta la pila antes de realizar cualquier modificación o mantenimiento. <br>
+                            Cualquier otra consulta comunicate con soporte.</p>
+                            
+                        </p>
+                        <a target="_blank" class="enlace" href="https://youtu.be/BINpe8pKrPA">Video de funcionamiento</a>
+                    </div>
+
+                    <a class="leer-mas" href="#">Leer más</a>
+                </section>
+
+                <!-- Agrega más secciones y contenido según necesites -->
+            </main>
+            <div class="hero2">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        // Asegúrate de incluir este código después de cargar la página o dentro de una función ready()
+
+        // Obtén todos los enlaces "Leer más"
+        const leerMasLinks = document.querySelectorAll('.leer-mas');
+
+        // Agrega un evento de clic a cada enlace
+        leerMasLinks.forEach((enlace) => {
+            enlace.addEventListener('click', (event) => {
+                event.preventDefault();
+                // Encuentra el contenedor del contenido adicional
+                const contenidoAdicional = enlace.previousElementSibling;
+
+                // Alternar la visibilidad del contenido adicional
+                contenidoAdicional.style.display = contenidoAdicional.style.display === 'none' ? 'block' : 'none';
+
+                // Actualizar el texto del enlace
+                enlace.textContent = contenidoAdicional.style.display === 'none' ? 'Leer más' : 'Leer menos';
+            });
+        });
+
+    </script>
+</body>
+
+</html>

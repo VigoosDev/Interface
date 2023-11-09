@@ -1,0 +1,125 @@
+.title{
+  text-align: center;
+  color: #204d74;
+}
+.custom-table {
+  align-items: center;
+  width: 100%;
+  font-size: 10px;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.custom-table th,
+.custom-table td {
+
+  padding: 10px;
+  text-align: center;
+}
+
+.custom-table thead {
+  background-color: #333;
+  color: #fff;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.custom-table tbody td {
+  border-bottom: 1px solid #ddd;
+}
+
+.custom-table a.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: none;
+}
+
+.custom-table a.btn:hover {
+  background-color: #286090;
+  border-color: #204d74;
+}
+.btn-activar {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 1px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-activar:hover{
+    color: #130b01;
+	box-shadow: 0 0 1em 0.25em #ff02c8,
+	0 0 4em 1em rgba(201, 3, 241, 0.78),
+	inset 0 0 0.75em 0.25em #af02ff;
+}
+/*-----------boton 3----------*/
+.regresar {
+    font-size: 15px; /* Ajusta el tamaño de fuente según tus necesidades */
+    left: 80%;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: #000000;
+    letter-spacing: 10px;
+    text-indent: 10px;
+    z-index: 2;
+}
+.regresar{
+    transition: all 0.6s ease;
+}
+
+.regresar::after{
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 110%;
+    left: -10%;
+    top: 0;
+    transform: skew(20deg, 0deg);
+    background-color: #ff0000;
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+.regresar::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: skew(20deg, 0deg);
+    border: 3px solid #b503cc;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.regresar:hover::after{
+    background-color: #ffffff31;
+    transform: skew(20deg, 0deg) translateX(240px);
+}
+
+.regresar:hover::before{
+    background-color: #b503cc;
+    border: 3px solid #b503cc;
+    transform: skew(20deg, 0deg) scale(1.1);
+}

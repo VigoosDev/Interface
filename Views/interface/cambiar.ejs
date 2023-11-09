@@ -1,0 +1,31 @@
+<!-- views/editar.ejs -->
+
+<html>
+  <head>
+    <title>Editar registro</title>
+    <link rel="stylesheet" href="/editar.css">
+  </head>
+  <body>
+    <h1>Editar perfil <%= registro.nombre %></h1>
+    <!-- Formulario para actualizar un registro -->
+    <form method="POST" action="/users/<%= registro.id %>?_method=PUT">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="nombre" value="<%= registro.nombre %>" required>
+      <label for="firs-name">Apellido Paterno:</label>
+      <input type="text" id="firs-name" name="apellido_paterno" value="<%= registro.apellido_paterno %>" required>
+      <label for="mother-first-name">Apellido Materno:</label>
+      <input type="text" id="mother-first-name" name="apellido_materno" value="<%= registro.apellido_materno %>" required>
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="correo" value="<%= registro.correo %>"required>
+      <label for="password">contraseña:</label>
+      <input type="password" id="contraseña" name="contraseña" value="<%= registro.contraseña %>"required>
+      <label for="direction">Direccion:</label>
+      <input src="/public/img/usuario.png" type="text" id="" name="direccion" value="<%= registro.direccion %>" required>
+      <label for="tel">Telefono:</label>
+      <input type="number" id="tel" name="telefono" value="<%= registro.telefono %>" required>
+
+    
+      <button type="submit" class="btn-enviar">Actualizar</button>
+    </form>
+  </body>
+</html>

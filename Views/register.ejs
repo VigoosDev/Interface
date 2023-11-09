@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="prueba.css">
+    <title>Registro de usuarios</title>
+</head>
+
+<body class="body">
+    <%- include('./partials/error') %>
+        <div class="login-box">
+            <h2>REGISTRATE</h2>
+            <form action="/users" method="POST">
+                <div class="user-box">
+                    <img src="img/nombre.png" alt="" class="icon">
+                    <input type="text" name="nombre" id="name" required="" placeholder="nombre" value=""
+                        autocomplete="off" autofocus>
+                </div>
+                <div class="user-box">
+                    <img src="img/nombre.png" alt="" class="icon">
+                    <input type="text" name="apellido_paterno" id="last-name" required autocomplete="off"
+                        placeholder="apellido paterno" value="">
+                </div>
+                <div class="user-box">
+                    <img src="img/nombre.png" alt="" class="icon">
+                    <input type="text" name="apellido_materno" id="mother's last name" required autocomplete="off"
+                        placeholder="apellido materno" value="">
+                </div>
+                <div class="user-box">
+                    <img src="img/correo.png" class="icon" alt="">
+                    <input type="email" name="correo" id="email" required="" placeholder="correo" value=""
+                        autocomplete="off">
+                </div>
+                <div class="user-box">
+                    <img src="img/contraseña.png" class="icon" alt="">
+                    <input type="password" name="contraseña" id="password" required autocomplete="off"
+                        placeholder="contraseña" value="">
+                </div>
+                <div class="user-box">
+                    <img src="img/direccion.png" class="icon" alt="">
+                    <input type="text" name="direccion" id="direction" required autocomplete="off"
+                        placeholder="direccion" value="">
+                </div>
+                <div class="user-box">
+                    <img src="img/telefono.png" class="icon" alt="">
+                    <input type="tel" name="telefono" id="tel" required autocomplete="off" placeholder="telefono"
+                        value="">
+                </div>
+
+                <button type="submit" class="btn-enviar" value="Registrarse" id="btnEnviar"> Enviar </button>
+            </form>
+        </div>
+            <h1 class="h1">.....</h1>
+        <script src="/public/prueba.js"></script>
+</body>
+
+</html>
